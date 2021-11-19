@@ -1,0 +1,316 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7D39617-0102-453B-A22F-394F071F39B6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Site</RootNamespace>
+    <AssemblyName>Site</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pages\areacliente.aspx" />
+    <Content Include="Pages\cadastro-cliente.aspx" />
+    <Content Include="Pages\cadastro-teste.aspx" />
+    <Content Include="Pages\condicoes.aspx" />
+    <Content Include="Pages\confirma-reserva.aspx" />
+    <Content Include="Pages\confirmacao-cliente.aspx" />
+    <Content Include="Pages\img\alucar.png" />
+    <Content Include="Pages\img\Celer.png" />
+    <Content Include="Pages\img\chery-QQ.png" />
+    <Content Include="Pages\img\clio.png" />
+    <Content Include="Pages\img\disponivel_no_google_play_1.png" />
+    <Content Include="Pages\img\duster_kappa_1-removebg-preview.png" />
+    <Content Include="Pages\img\duster_kappa_1.png" />
+    <Content Include="Pages\img\facebook_1.png" />
+    <Content Include="Pages\img\Ford-Fusion.png" />
+    <Content Include="Pages\img\imagem_ilustrativa.png" />
+    <Content Include="Pages\img\instagram_1.png" />
+    <Content Include="Pages\img\line_1.png" />
+    <Content Include="Pages\img\line_2.png" />
+    <Content Include="Pages\img\line_3.png" />
+    <Content Include="Pages\img\locadora_de_ve_culos.png" />
+    <Content Include="Pages\img\Login-Cliente-img\Altere, Imprima, Veja Informações, etc....png" />
+    <Content Include="Pages\img\Login-Cliente-img\alucar.png" />
+    <Content Include="Pages\img\Login-Cliente-img\Cadastro de Cliente.png" />
+    <Content Include="Pages\img\Login-Cliente-img\disponivel_no_google_play_1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\facebook_1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\instagram_1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\Line 4.png" />
+    <Content Include="Pages\img\Login-Cliente-img\line_1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\line_2.png" />
+    <Content Include="Pages\img\Login-Cliente-img\line_3.png" />
+    <Content Include="Pages\img\Login-Cliente-img\locadora_de_ve_culos.png" />
+    <Content Include="Pages\img\Login-Cliente-img\Localização ALUCAR final 2 1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\login_do_cliente.png" />
+    <Content Include="Pages\img\Login-Cliente-img\rectangle_14.png" />
+    <Content Include="Pages\img\Login-Cliente-img\Reservar Veículo.png" />
+    <Content Include="Pages\img\Login-Cliente-img\square_39.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\condicoes-text.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\Confirmação da Reserva.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\Leia as Informações Sobre a Sua Reserva.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\SOBRE A SUA RESERVA_.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\tabela refeita1 1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\Tabela Veículos Luxo download 1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\Tabela Veículos popular download 1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\tarifas-img\Área da Confirmação da Reserva.png" />
+    <Content Include="Pages\img\Login-Cliente-img\user_1.png" />
+    <Content Include="Pages\img\Login-Cliente-img\user_2.png" />
+    <Content Include="Pages\img\Login-Cliente-img\whatsapp_1.png" />
+    <Content Include="Pages\img\rectangle_4.png" />
+    <Content Include="Pages\img\rectangle_5.png" />
+    <Content Include="Pages\img\renault-duster-zen-manual-bege-.png" />
+    <Content Include="Pages\img\r_145_89_dia.png" />
+    <Content Include="Pages\img\r_195_99_dia.png" />
+    <Content Include="Pages\img\r_325_29_dia.png" />
+    <Content Include="Pages\img\r_354_99_dia.png" />
+    <Content Include="Pages\img\r_80_79_dia.png" />
+    <Content Include="Pages\img\user.png" />
+    <Content Include="Pages\img\user_2.png" />
+    <Content Include="Pages\img\voc__conhece_voc__confia.png" />
+    <Content Include="Pages\img\whatsapp_1.png" />
+    <Content Include="Pages\img\ÁREA DO CLIENTE.png" />
+    <Content Include="Pages\localizacao.aspx" />
+    <Content Include="Pages\login-cliente.aspx" />
+    <Content Include="Pages\reserva-veiculo.aspx" />
+    <Content Include="Pages\sobre-reserva.aspx" />
+    <Content Include="Pages\tarifas.aspx" />
+    <Content Include="Pages\PaginaInicial.aspx">
+      <BrowseToURL>~/Pages/Pagina-Inicial.aspx</BrowseToURL>
+    </Content>
+    <Content Include="Pages\style.css" />
+    <Content Include="Pages\tela-log.aspx" />
+    <None Include="Scripts\jquery-3.6.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\areacliente.aspx.cs">
+      <DependentUpon>areacliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\areacliente.aspx.designer.cs">
+      <DependentUpon>areacliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\cadastro-cliente.aspx.cs">
+      <DependentUpon>cadastro-cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\cadastro-cliente.aspx.designer.cs">
+      <DependentUpon>cadastro-cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\cadastro-teste.aspx.cs">
+      <DependentUpon>cadastro-teste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\cadastro-teste.aspx.designer.cs">
+      <DependentUpon>cadastro-teste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\condicoes.aspx.cs">
+      <DependentUpon>condicoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\condicoes.aspx.designer.cs">
+      <DependentUpon>condicoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\confirma-reserva.aspx.cs">
+      <DependentUpon>confirma-reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\confirma-reserva.aspx.designer.cs">
+      <DependentUpon>confirma-reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\confirmacao-cliente.aspx.cs">
+      <DependentUpon>confirmacao-cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\confirmacao-cliente.aspx.designer.cs">
+      <DependentUpon>confirmacao-cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\localizacao.aspx.cs">
+      <DependentUpon>localizacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\localizacao.aspx.designer.cs">
+      <DependentUpon>localizacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\login-cliente.aspx.cs">
+      <DependentUpon>login-cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\login-cliente.aspx.designer.cs">
+      <DependentUpon>login-cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\reserva-veiculo.aspx.cs">
+      <DependentUpon>reserva-veiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\reserva-veiculo.aspx.designer.cs">
+      <DependentUpon>reserva-veiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\sobre-reserva.aspx.cs">
+      <DependentUpon>sobre-reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\sobre-reserva.aspx.designer.cs">
+      <DependentUpon>sobre-reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\tarifas.aspx.cs">
+      <DependentUpon>tarifas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\tarifas.aspx.designer.cs">
+      <DependentUpon>tarifas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaginaInicial.aspx.cs">
+      <DependentUpon>PaginaInicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PaginaInicial.aspx.designer.cs">
+      <DependentUpon>PaginaInicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\tela-log.aspx.cs">
+      <DependentUpon>tela-log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\tela-log.aspx.designer.cs">
+      <DependentUpon>tela-log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{498ea2b0-0539-4f36-9119-8cb7ac40ed87}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60755</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60755/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

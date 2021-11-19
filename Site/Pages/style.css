@@ -1,0 +1,1014 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e9e9e9;
+}
+
+.max-width {
+    max-width: 1366px;
+    margin: auto;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+li:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 240px 100px 100px;
+}
+
+    .logo a {
+        text-decoration: none;
+        color: black;
+        font-size: 64px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .logo img {
+        margin-top: 22px;
+    }
+
+    .logo h1 {
+        text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.59);
+    }
+
+header {
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    height: 115px;
+    background: #bcd3f2;
+    position: sticky;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 0;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+}
+
+.nav-user-icon {
+    transform: translateY(3px);
+    transform: translateX(29px);
+}
+
+ul {
+    display: flex;
+    /* margin-left: 400px; */
+    align-items: center;
+}
+
+    ul img {
+        height: 50px;
+        width: 50px;
+    }
+
+li {
+    display: block;
+    list-style: none;
+    margin-left: 52px;
+}
+
+.nav-btn button, .btn-alugue button {
+    margin-left: 30px;
+    width: 162px;
+    height: 72px;
+    left: 1149px;
+    top: 29px;
+    background-color: #91fc43;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 40;
+}
+
+button:hover {
+    background-color: rgb(178, 253, 103);
+}
+
+/*--------------------------------------------------------*/
+
+.texto-marca01 .text {
+    display: flex;
+    flex: 2 1 260px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 90px 0;
+    z-index: 0;
+}
+
+.aluc {
+    text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.59);
+}
+
+.locadora-img {
+    margin-top: 5px;
+    transform: translateX(-70px);
+}
+
+.confia-img {
+    margin-top: 5px;
+    transform: translateX(-100px);
+}
+
+.text h1 {
+    height: 100px;
+    font-family: 'Playfair Display', serif;
+    font-size: 140px;
+    margin-left: 30px;
+    margin-bottom: 95px;
+}
+
+.text img {
+    display: flex;
+    align-items: flex-start;
+    height: 90px;
+    margin-right: 90px;
+}
+
+/* --------------------------------------------------*/
+
+/* carros img  */
+
+.carros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    .carros strong {
+        position: absolute;
+        margin: 8px 15px;
+    }
+
+.car01, .car02, .car03, .car04, .car05 {
+    width: 268px;
+    height: 150px;
+    background: #CAFF32;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+    .car01 img {
+        width: 246px;
+        height: 139px;
+    }
+
+    .car02 img {
+        width: 231px;
+        height: 174px;
+        transform: translate(32px, -24px);
+    }
+
+    .car03 img {
+        width: 264px;
+        height: 132px;
+        transform: translateY(15px);
+    }
+
+    .car04 img {
+        width: 321px;
+        height: 186px;
+        transform: translate(-30px, -25px);
+    }
+
+    .car05 img {
+        width: 251px;
+        height: 190px;
+        transform: translate(5px, -25px);
+    }
+
+.precos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #e9e9e9;
+    margin-top: 10px;
+}
+
+.preco01 p, .preco02 p, .preco03 p, .preco04 p, .preco05 p {
+    transform: translateX(-20px);
+}
+
+.precos p {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.precos img {
+    padding-bottom: 15px;
+}
+
+/*-------------------------------------------------*/
+
+/* Página localização */
+
+.container-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-maps {
+    margin: 50px 0;
+}
+
+    .box-maps p {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .box-maps img {
+        max-width: 100%;
+    }
+
+/* -------------------------------------------------------------------- */
+
+/* Página Condições */
+
+.container-condicoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-condicoes {
+    max-width: 1110px;
+    margin-bottom: 40px;
+}
+
+.text-1 {
+    margin: 55px 0;
+}
+
+.par-condicoes {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* Página Tarifas */
+
+.container-tarifas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-tarifas .tarifas-table {
+    margin: 60px 0;
+}
+
+.tarifas-table .par-tarifa {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.tarifas-table .tar {
+    margin-top: 15px;
+}
+
+/* ----------------------------------------------------------- */
+
+/* faixas  */
+
+.content-1 {
+    display: grid;
+    grid-template-columns: 900px 50px;
+    background-color: #efd853;
+    max-width: 1366px;
+    height: 110px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+}
+
+    .content-1 h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .content-1 p {
+        font-size: 21px;
+    }
+
+    .content-1 button {
+        width: 265px;
+        height: 76px;
+        margin-top: 15px;
+    }
+
+.sub-content-1 {
+    margin-top: 15px;
+    margin-left: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*-------------------------------------------------------------------*/
+
+.content-2 {
+    display: grid;
+    grid-template-columns: 900px 50px;
+    background-color: #60d867;
+    max-width: 1366px;
+    height: 110px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 auto;
+}
+
+    .content-2 h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .content-2 p {
+        font-size: 21px;
+    }
+
+    .content-2 img {
+        width: 294px;
+        height: 109px;
+    }
+
+    .content-2 a {
+        margin-left: 15px;
+    }
+
+.sub-content-2 {
+    margin-top: 15px;
+    margin-left: 120px;
+}
+
+/*  Footer */
+
+/* color background footer -> #d2dded*/
+
+.footer-bg {
+    margin: auto;
+    max-width: 1366px;
+    height: 75vh;
+    background-color: #d2dded;
+}
+
+.texto-marca02 {
+    display: grid;
+    grid-template-columns: 740px 100px;
+    padding-top: 20px;
+}
+
+    .texto-marca02 h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 64px;
+        font-weight: bold;
+        margin-left: 500px;
+        text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.59);
+    }
+
+    .texto-marca02 img {
+        margin-top: 22px;
+    }
+
+.container-bg {
+    padding: 0 50px;
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contatos {
+    padding: 0 50px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+    .contatos .endereco {
+        width: 400px;
+        line-height: 38px;
+    }
+
+    .contatos .telefones {
+        width: 400px;
+        line-height: 38px;
+        transform: translateX(25px);
+    }
+
+.redes {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1.2em;
+    transform: translateX(40px);
+}
+
+    .redes img {
+        width: 110px;
+        height: 100px;
+        margin-right: 15px;
+    }
+
+/* fim da pagina inicial,css */
+
+/* ----------------------------------------------------- */
+
+/* página de escolha fisico ou juridico */
+
+.container-log {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 0;
+}
+
+.log-box {
+    width: 346px;
+    height: 158px;
+    background: #F6F6F6;
+    border: 2px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+.log-box-content {
+    align-self: center;
+}
+
+.title-cliente .log {
+    margin-left: 200px;
+    font-weight: 500;
+}
+
+.title-cliente .log-01 {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.title-cliente .log-02 {
+    margin: 30px 0 10px 0;
+}
+
+.log-box-content p {
+    color: black;
+    text-decoration-line: underline;
+}
+
+.log-parag {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 19px;
+}
+
+/* ------------------------------------------ */
+
+/* Página de Login do  Cliente */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 0;
+}
+
+.title-cliente {
+    margin-top: 40px;
+}
+
+.img-cliente {
+    margin-left: 7px;
+    padding-bottom: 8px;
+}
+
+input {
+    width: 407px;
+    height: 50px;
+    border-radius: 7px;
+    border: 2px solid #C4C4C4;
+    font-size: 21px;
+    padding-left: 30px;
+    margin: 10px 0;
+}
+
+.title-cliente .p-cliente {
+    margin: 15px 0;
+    margin-left: 80px;
+}
+
+label {
+    font-size: 21px;
+}
+
+.btn-1 {
+    width: 407px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: rgb(121, 254, 40);
+    background: linear-gradient(0deg, rgba(121, 254, 40, 1) 0%, rgba(154, 253, 45, 1) 100%);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.cadastro {
+    margin-top: 40px;
+    margin-left: -12px;
+    margin-bottom: 30px;
+}
+
+.cadastre {
+    text-decoration-line: underline;
+    color: black;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Página de Login Jurídico */
+
+.p-ju {
+    font-size: 19px;
+    line-height: 22px;
+    margin-left: 15px;
+}
+
+.form-ju {
+    margin-left: 70px;
+}
+
+.log-ju {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding-left: 70px;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* Página cadastro de cliente  */
+
+.container-cad {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+.form-cad {
+    margin: 30px 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Confirmação de Cadastro de Cliente */
+
+.title-confirme {
+    margin-top: 50px;
+    margin-left: 220px;
+}
+
+    .title-confirme .title-par {
+        margin-left: 65px;
+        margin-bottom: 8px;
+    }
+
+.cad-confirme {
+    margin-bottom: 20px;
+}
+
+.user-confirme {
+    transform: translateY(8px);
+    margin-right: 4px;
+}
+
+.container-cliente-confirme {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 0;
+}
+
+.container-confirme {
+    display: flex;
+    justify-content: center;
+}
+
+.box-confirme .box-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 95px;
+    width: 410px;
+    background: #f6f6f6;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.email-par {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.box-par {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-confirme p {
+    font-size: 21px;
+}
+
+a .btn-confirme {
+    width: 407px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: #fe2828;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+a .btn-confirme-02 {
+    width: 407px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: rgb(121, 254, 40);
+    background: linear-gradient(0deg, rgba(121, 254, 40, 1) 0%, rgba(154, 253, 45, 1) 100%);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* Pagina Area do Cliente  */
+
+.ac-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 0;
+}
+
+.title-ac {
+    margin-top: 50px;
+    margin-left: 270px;
+}
+
+.subtitle-ac {
+    margin-top: 25px;
+    margin-left: 250px;
+    margin-bottom: 10px;
+}
+
+.area-box {
+    text-decoration: none;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+    .area-box a {
+        color: black;
+        text-decoration: none;
+    }
+
+.p_1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.p_2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.p_3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.p_4 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.p_5 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.p_6 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------- */
+
+/* pagina Reserva de Veículo */
+
+.title-confirme {
+    margin-top: 50px;
+    margin-left: 220px;
+}
+
+    .title-confirme .title-par {
+        margin-left: 65px;
+        margin-bottom: 8px;
+    }
+
+.reserva-title {
+    margin-left: 60px;
+}
+
+.cad-confirme {
+    margin-bottom: 20px;
+}
+
+.user-confirme {
+    transform: translateY(8px);
+    margin-right: 4px;
+}
+
+.container-cliente-confirme {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 0;
+}
+
+.form-reserva {
+    display: flex;
+    justify-content: center;
+}
+
+form .reserva-cars {
+    width: 410px;
+    height: 50px;
+    text-align: center;
+    border-radius: 7px;
+    background: #F6F6F6;
+}
+
+form input {
+    padding-left: 135px;
+}
+
+.reserva-cars .none-reserva {
+    color: rgba(0, 0, 0, 0.35)
+}
+
+.container-confirme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-reserva .box-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 95px;
+    width: 410px;
+    background: #f6f6f6;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.email-par {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.box-confirme .reserva-car {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-par {
+    display: flex;
+    justify-content: center;
+}
+
+.cont-confirme p {
+    font-size: 21px;
+}
+
+a .btn-confirme {
+    width: 407px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: #fe2828;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+a .btn-confirme-02 {
+    width: 407px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: rgb(121, 254, 40);
+    background: linear-gradient(0deg, rgba(121, 254, 40, 1) 0%, rgba(154, 253, 45, 1) 100%);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.aviso-reserva {
+    font-size: 20px;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* Página Confirmação de Reserva  */
+
+.title-reserva {
+    margin-top: 60px;
+    margin-left: 280px;
+    padding-bottom: 20px;
+}
+
+.subtitle-reserva {
+    margin-left: 340px;
+    margin-bottom: 25px;
+}
+
+.confirma-container {
+    display: flex;
+}
+
+.conf-wrap {
+    margin-left: 70px;
+}
+
+.reserva-par, .reserva-p {
+    text-align: center;
+}
+
+.reserva-p {
+    margin-top: 15px;
+}
+
+.p-reserva-1, .p-reserva-2 {
+    text-align: center;
+}
+
+.p-reserva-1 {
+    margin-bottom: 15px;
+}
+
+.p-reserva-2 {
+    font-size: 36px;
+}
+
+.conf-wrap .box-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 95px;
+    width: 410px;
+    background: #f6f6f6;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+}
+
+.btn-reserva-1 {
+    width: 407px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: #fe2828;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+    .btn-reserva-1:hover {
+        background: #fe2828;
+    }
+
+.btn-reserva-2 {
+    width: 407px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    background: rgb(121, 254, 40);
+    background: linear-gradient(0deg, rgba(121, 254, 40, 1) 0%, rgba(154, 253, 45, 1) 100%);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.area-box .p-reserva-last {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 60px;
+}
+
+/* -----------------------------------------------------------  */
+
+/* Página Sobre a Reserva  */
+
+.title-sobre {
+    margin-top: 60px;
+    margin-left: 280px;
+    padding-bottom: 20px;
+}
+
+.subtitle-sobre {
+    margin-left: 310px;
+    margin-bottom: 15px;
+}
+
+.area-box .sobre-line {
+    transform: translateX(55px);
+}
+
+.p-sobre-1, .p-sobre-2, .p-sobre-3, .p-sobre-4 {
+    text-align: center;
+    margin-left: 50px;
+}
+
+.p-sobre-1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.p-sobre-2 {
+    margin-bottom: 20px;
+}
+
+.p-sobre-3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.p-sobre-4 {
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+/* --------------------------------------------------------------  */
