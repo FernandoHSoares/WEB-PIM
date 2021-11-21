@@ -28,7 +28,7 @@
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
       </ul>
-      <a class="nav-btn"><button runat="server" onserverclick="Alugar_ServerClick">Alugar</button></a>
+     <a class="nav-btn"><button runat="server" onserverclick="Alugar_ServerClick">Alugar</button> </a>
     </nav>
   </header>
 
@@ -54,7 +54,7 @@
           <asp:Label ID="lblMensagemlogin" runat="server" ForeColor="Red" ></asp:Label>
       </p>
        
-          <a class="btn-1" ><button class="btn-1" type="submit" runat="server" onserverclick="BTN_Entrar" >ENTRAR</button></a>
+        <button class="btn-1" runat="server" onserverclick="BTN_Entrar" >ENTRAR</button>
      
       <p class="cadastro">Você Ainda Não Tem Cadastro? <a href="cadastro-cliente.aspx"><span class="cadastre">Cadastre-se</span></a></p>
     

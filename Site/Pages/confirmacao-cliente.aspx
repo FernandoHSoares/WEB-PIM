@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="confirmacao-cliente.aspx.cs" Inherits="Site.Pages.confirmacao_cliente" %>
 
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
 
@@ -46,84 +47,101 @@
       <div class="area-box">
         <img class="area-line" src="img/Login-Cliente-img/Line 4.png" alt="img">
       </div>
-
+        <asp:Label ID="lblteste" runat="server" ></asp:Label>
       <div class="container-confirme">
         <div class="box-confirme">
           <div class="box-1">
             <div class="cont-confirme">
-              <p class="email-par">E-mail*:</p>
-              <p>Ex: joaodasilva@gmai.com</p>
+              <p class="email-par">E-mail*:</p>  
+                &nbsp&nbsp<asp:Label ID="lblEmail" runat="server" ></asp:Label>
+                <asp:TextBox ID="txEmail" TextMode="Email" runat="server"></asp:TextBox>                  
             </div>
           </div>
 
-          <div class="box-1">
-            <div class="cont-confirme">
-              <p class="email-par">Senha*:</p>
-              <p>Insira Uma Senha de Sua Preferência</p>
-            </div>
-          </div>
-
+            <br />
           <div class="box-1">
             <div class="cont-confirme">
               <p class="email-par">Nome Completo*:</p>
-              <p>Ex: João da Silva</p>
+             &nbsp&nbsp <asp:Label ID="lblNome" runat="server"></asp:Label>
+              <asp:TextBox ID="txNome" runat="server" ></asp:TextBox>
             </div>
           </div>
-
+        <br />
           <div class="box-1">
             <div class="cont-confirme">
               <p class="email-par">CPF ou Passaporte*/**:</p>
-              <p>Ex: 12345678900</p>
+             &nbsp&nbsp <asp:Label ID="lblCPF" runat="server"></asp:Label>
+              <asp:TextBox ID="txCPF" TextMode="Number" runat="server"  ></asp:TextBox>
+            </div>
+          </div>
+            <br />
+              <div class="box-1">
+            <div class="cont-confirme">
+              <p class="email-par">RG:</p>
+             &nbsp&nbsp <asp:Label ID="lblRG" runat="server"></asp:Label>
+              <asp:TextBox ID="txRG" TextMode="Number" runat="server" ></asp:TextBox>
             </div>
           </div>
 
+            <br />
           <div class="box-1">
             <div class="cont-confirme">
               <p class="email-par">Data de Nascimento*:</p>
-              <p class="box-par">Ex: 01/01/1990</p>
+             &nbsp&nbsp <asp:Label ID="lblDNasc" runat="server"></asp:Label>
+              <asp:TextBox ID="txDNasc" TextMode="Date" runat="server" ></asp:TextBox>
             </div>
           </div>
 
+            <br />
           <div class="box-1">
             <div class="cont-confirme">
               <p class="email-par">Número da CNH (Carteira Habilitação)*:</p>
-              <p class="box-par">Ex: 123456789000</p>
+              &nbsp&nbsp<asp:Label ID="lblNumCNH" runat="server" ></asp:Label>
+              <asp:TextBox ID="txCNH" TextMode="Number" runat="server" ></asp:TextBox>
             </div>
           </div>
 
+            <br />
           <div class="box-1">
             <div class="cont-confirme">
               <p class="email-par">Telefone/Celular 1*:</p>
-              <p class="box-par">Ex: 12912345678</p>
+              &nbsp&nbsp<asp:Label ID="lblTelefone" runat="server" ></asp:Label>
+              <asp:TextBox ID="txTelefone" runat="server" ></asp:TextBox>
             </div>
           </div>
 
+            <br />
           <div class="box-1">
             <div class="cont-confirme">
               <p class="email-par">Telefone/Celular 2 (Opcional):</p>
-              <p class="box-par">Ex: 1239123456</p>
+              &nbsp&nbsp<asp:Label ID="lblCelular" runat="server"></asp:Label>
+              <asp:TextBox ID="txcel" runat="server" ></asp:TextBox>
+
             </div>
           </div>
 
+            <br />
           <div class="box-1">
             <div class="cont-confirme">
-              <p class="email-par">Telefone/Celular 3 (Opcional):</p>
-              <p class="box-par">Ex: 12998765432</p>
+              &nbsp&nbsp<p class="email-par">Telefone/Celular 3 (Opcional):</p>
+              <asp:TextBox ID="txcel2" runat="server" ></asp:TextBox>
             </div>
           </div>
           <br>
           <p>*Obrigatório <br>
             **Não Insira .- (Pontos e Traços)
           </p>
-
-
-
+            <p>
+            <asp:Label ID="lblMensagem" runat="server" ForeColor="Red"></asp:Label>
+            <asp:Label ID="lblmsg" runat="server" ForeColor="Red"></asp:Label>
+            </p>
+<!--
           <a href="cadastro-cliente.html">
             <button class="btn-confirme" type="submit">ALTERAR DADOS</button>
           </a><br>
-          <a href="reserva-veiculo.html">
-            <button class="btn-confirme-02" type="submit">CONTINUAR</button>
-          </a>
+            -->
+          <button class="btn-1" runat="server" onserverclick="btnConfirmaCadastro" >CONFIRMAR CADASTRO</button>
+            <br /> <br />
         </div>
       </div>
     </div>

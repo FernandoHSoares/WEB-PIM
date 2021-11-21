@@ -6,53 +6,48 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DAL.Model;
 using DAL.Persistence;
-
+using System.Web.SessionState;
 
 namespace Site.Pages
 {
     public partial class cadastro_cliente : System.Web.UI.Page
     {
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Prosseguir_ServerClick(object sender, EventArgs e)
+        public void btnProsseguir(object sender, EventArgs e)
         {
-           
-            
-                 Cliente C = new Cliente();
 
-                 C.Email = txEmail.Text;
-                 C.Senha = txSenha.Text;
-                 C.Nome = txNome.Text;
-                 C.CPF = txCPF.Text;
-                 C.DataNascimento = txDataNascimento.Text;
-                 C.NCarteiraHabilitacao = txNumCNH.Text;
-                 C.Telefone = txTel1.Text;
-                 C.RG = txtRG.Text;
-                 C.Passaporte = txCPF.Text;
-                 C.Celular = txCelular.Text;
-                 string confsenha = txConfSenha.Text;
-                
-
-            
+            Session["email"] = txEmail.Text;
+            Session["senha"] = txSenha.Text;
+            Session["nome"] = txNome.Text;
+            Session["cpf"] = txCPF.Text;
+            Session["datanascimento"] = txDataNascimento.Text;
+            Session["cnh"] = txNumCNH.Text;
+            Session["telefone"] = txTel1.Text;
+            Session["rg"] = txRG.Text;
+            Session["celular"] = txCelular.Text;
 
 
-                 ClienteDAL d = new ClienteDAL();
+                 
 
+            if (txSenha.Text.Equals(txConfSenha.Text))
+            {
 
-                 d.Cadastrar(C.Email, C.Senha, confsenha, C.Nome, C.CPF, C.DataNascimento, C.NCarteiraHabilitacao, C.Telefone, C.RG, C.Passaporte, C.Celular); 
-
-                 lblMensagem.Text = ""+ d.mensagem + "";
-
-
-            
-         }
-
-         protected void Unnamed_ServerClick(object sender, EventArgs e)
-         {
+                Response.Redirect("/Pages/confirmacao-cliente.aspx");
+            }
+            else
+            {
+                lblMensagem.Text = "Senhas não correspondem!";
+            }
 
          }
+
+       
+
     }
 }

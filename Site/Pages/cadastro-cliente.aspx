@@ -43,7 +43,14 @@
       </div>
 
       <!-- fomulario -->
-      <label>E-mail:</label> <br>
+      
+      <br><br>
+      <label>Nome Completo*:</label> <br>
+      <asp:TextBox ID="txNome" runat="server" placeholder="Ex: Joao da silva"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredNome" runat="server" ControlToValidate="txNome" ErrorMessage="Por favor digite seu nome completo" ForeColor="Red" ></asp:RequiredFieldValidator>
+
+      <br /><br />
+      <label>E-mail:</label> <br/>
       <asp:TextBox ID="txEmail" runat="server" TextMode="Email" placeholder="Ex: joaodasilva@gmail.com" ></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredEmail" runat="server" ControlToValidate="txEmail" ErrorMessage="Por favor digite seu E-mail" ForeColor="Red" ></asp:RequiredFieldValidator>
 
@@ -54,39 +61,47 @@
       <asp:RequiredFieldValidator ID="RequiredSenha" runat="server" ControlToValidate="txSenha" ErrorMessage="Por favor digite uma senha" ForeColor="Red" ></asp:RequiredFieldValidator>
 
       <br><br>
-      <label>Senha:</label> <br>
-      <asp:TextBox ID="txConfSenha" runat="server" TextMode="Password" placeholder="Sua Senha de Login do Site" ></asp:TextBox>
-      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txConfSenha" ErrorMessage="Por favor digite uma senha" ForeColor="Red" ></asp:RequiredFieldValidator>
+      <label>Confirme sua senha:</label> <br>
+      <asp:TextBox ID="txConfSenha" runat="server" TextMode="Password" placeholder="confirmação da senha de login" ></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredConfSenha" runat="server" ControlToValidate="txConfSenha" ErrorMessage="Por favor digite a senha de confirmação" ForeColor="Red" ></asp:RequiredFieldValidator>
 
-      <br><br>
-      <label>Nome Completo*:</label> <br>
-      <asp:TextBox ID="txNome" runat="server" placeholder="Ex: Joao da silva"></asp:TextBox>
       
-
       <br><br>
       <label>CPF ou Passaporte*:</label> <br>
       <asp:TextBox ID="txCPF" runat="server" TextMode="Number" placeholder="CPF ou Passaporte" ></asp:TextBox>
-      
-      <br> <br>
-      <label>Data de Nascimento*:</label> <br>
-      <asp:TextBox Id="txDataNascimento" runat="server" TextMode="Date" placeholder="ex: 24/05/1997" ></asp:TextBox>
-      
+      <asp:RequiredFieldValidator ID="RequiredCPF" runat="server" ControlToValidate="txCPF" ErrorMessage="Por favor digite o seu CPF" ForeColor="Red" ></asp:RequiredFieldValidator>
+     
+        
+      <br><br>
+      <label>RG*:</label> <br>
+      <asp:TextBox ID="txRG" runat="server" TextMode="Number" placeholder="RG" ></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredRG" runat="server" ControlToValidate="txRG" ErrorMessage="Por favor digite Seu RG" ForeColor="Red" ></asp:RequiredFieldValidator>
+     
+        
       <br><br>
       <label>Numero da CNH*:</label> <br>
       <asp:TextBox ID="txNumCNH" runat="server" TextMode="Number" placeholder="46554485566" ></asp:TextBox>
-    
+      <asp:RequiredFieldValidator ID="RequiredNumCNH" runat="server" ControlToValidate="txNumCNH" ErrorMessage="Por favor digite o numero da CNH" ForeColor="Red" ></asp:RequiredFieldValidator>
+      
+        
+      <br><br>
+      <label>Data de Nascimento*:</label> <br>
+      <asp:TextBox Id="txDataNascimento" runat="server" TextMode="Date" placeholder="ex: 24/05/1997" ></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredDataNascimento" runat="server" ControlToValidate="txDataNascimento" ErrorMessage="Por favor entre com a data de nascimento" ForeColor="Red" ></asp:RequiredFieldValidator>
+          
+        
       <br> <br>
       <label>Telefone/Celular 1*:</label> <br>
       <asp:TextBox ID="txTel1" runat="server" TextMode="Phone" Placeholder="988988989" ></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredTel1" runat="server" ControlToValidate="txTel1" ErrorMessage="Por favor digite seu telefone" ForeColor="Red" ></asp:RequiredFieldValidator>
       
+        
       <br><br>
       <label>Celular*:</label> <br>
       <asp:TextBox ID="txCelular" runat="server" TextMode="Phone" placeholder="celular" ></asp:TextBox>
-
-      <br><br>
-      <label>RG*:</label> <br>
-      <asp:TextBox ID="txtRG" runat="server" TextMode="Number" placeholder="RG" ></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredCelular" runat="server" ControlToValidate="txCelular" ErrorMessage="Por favor digite um celular" ForeColor="Red" ></asp:RequiredFieldValidator>
       
+     
       <br><br>    
       <p>
         *Obrigatório <br>
@@ -98,7 +113,7 @@
         </p>
       
         
-       <button  class="btn-1" runat="server" onserverclick="Prosseguir_ServerClick" >PROSSEGUIR</button>
+       <button  class="btn-1" runat="server" onserverclick="btnProsseguir" >PROSSEGUIR</button>
       
 
     </div>

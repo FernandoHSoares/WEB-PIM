@@ -44,11 +44,10 @@
       <div class="area-box">
         <img class="area-line" src="img/Login-Cliente-img/Line 4.png" alt="img">
 
-        <p class="p_1"><a href="#">Reservas</a></p>
-        <p class="p_2"><a href="#">Editar Reservas</a></p>
-        <p class="p_3"><a href="#">Imprimir reservas</a></p>
-        <p class="p_4"><a href="#">Informações do Cadastro</a></p>
-        <p class="p_5"><a href="#">Editar Informações do Cadastro</a></p>
+        <p class="p_1"><a href="historico-reserva.aspx">Reservas</a></p>
+        <p class="p_2"><a href="crud-reserva-veiculo.aspx">Editar Reservas</a></p> 
+        <p class="p_4"><a href="pagina-crud-cliente.aspx">Informações do Cadastro</a></p>
+        <p class="p_5"><a href="crud-cadastro-cliente.aspx">Editar Informações do Cadastro</a></p>
         <p class="p_6"><a href="pagina-inicial.aspx">Sair</a></p>
       </div>
     </div>

@@ -13,7 +13,7 @@ namespace Site.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
         protected void Alugar_ServerClick(object sender, EventArgs e)
         {
@@ -34,6 +34,7 @@ namespace Site.Pages
 
             if (cliente.tem == confirma)
             {
+                
                 Response.Redirect("/Pages/areacliente.aspx");
             }
             else 

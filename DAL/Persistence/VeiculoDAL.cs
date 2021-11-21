@@ -8,7 +8,7 @@ using DAL.Model;
 
 namespace DAL.Persistence
 {
-    class VeiculoDAL : Conexao
+    class VeiculoDAL 
     {
        /* public List<Veiculo> Listar()
         {

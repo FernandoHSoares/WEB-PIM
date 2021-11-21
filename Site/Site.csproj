@@ -87,10 +87,12 @@
   <ItemGroup>
     <Content Include="Pages\areacliente.aspx" />
     <Content Include="Pages\cadastro-cliente.aspx" />
-    <Content Include="Pages\cadastro-teste.aspx" />
     <Content Include="Pages\condicoes.aspx" />
     <Content Include="Pages\confirma-reserva.aspx" />
     <Content Include="Pages\confirmacao-cliente.aspx" />
+    <Content Include="Pages\crud-cadastro-cliente.aspx" />
+    <Content Include="Pages\crud-reserva-veiculo.aspx" />
+    <Content Include="Pages\historico-reserva.aspx" />
     <Content Include="Pages\img\alucar.png" />
     <Content Include="Pages\img\Celer.png" />
     <Content Include="Pages\img\chery-QQ.png" />
@@ -148,6 +150,7 @@
     <Content Include="Pages\img\ÁREA DO CLIENTE.png" />
     <Content Include="Pages\localizacao.aspx" />
     <Content Include="Pages\login-cliente.aspx" />
+    <Content Include="Pages\pagina-crud-cliente.aspx" />
     <Content Include="Pages\reserva-veiculo.aspx" />
     <Content Include="Pages\sobre-reserva.aspx" />
     <Content Include="Pages\tarifas.aspx" />
@@ -178,13 +181,6 @@
     <Compile Include="Pages\cadastro-cliente.aspx.designer.cs">
       <DependentUpon>cadastro-cliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\cadastro-teste.aspx.cs">
-      <DependentUpon>cadastro-teste.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\cadastro-teste.aspx.designer.cs">
-      <DependentUpon>cadastro-teste.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\condicoes.aspx.cs">
       <DependentUpon>condicoes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -206,6 +202,27 @@
     <Compile Include="Pages\confirmacao-cliente.aspx.designer.cs">
       <DependentUpon>confirmacao-cliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\crud-cadastro-cliente.aspx.cs">
+      <DependentUpon>crud-cadastro-cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\crud-cadastro-cliente.aspx.designer.cs">
+      <DependentUpon>crud-cadastro-cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\crud-reserva-veiculo.aspx.cs">
+      <DependentUpon>crud-reserva-veiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\crud-reserva-veiculo.aspx.designer.cs">
+      <DependentUpon>crud-reserva-veiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\historico-reserva.aspx.cs">
+      <DependentUpon>historico-reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\historico-reserva.aspx.designer.cs">
+      <DependentUpon>historico-reserva.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\localizacao.aspx.cs">
       <DependentUpon>localizacao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +236,13 @@
     </Compile>
     <Compile Include="Pages\login-cliente.aspx.designer.cs">
       <DependentUpon>login-cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pagina-crud-cliente.aspx.cs">
+      <DependentUpon>pagina-crud-cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\pagina-crud-cliente.aspx.designer.cs">
+      <DependentUpon>pagina-crud-cliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\reserva-veiculo.aspx.cs">
       <DependentUpon>reserva-veiculo.aspx</DependentUpon>

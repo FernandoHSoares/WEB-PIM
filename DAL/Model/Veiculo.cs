@@ -16,5 +16,11 @@ namespace DAL.Model
         public double Quilometragem { get; set; }
         public string Categoria { get; set; }
         public bool Disponibilidade { get; set; }
+
+        public Veiculo()
+        {
+
+        }
     }
+   
 }
