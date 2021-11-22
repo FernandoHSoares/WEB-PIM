@@ -27,7 +27,8 @@ namespace Site.Pages
             lblNumCNH.Text = Session["cnh"].ToString();
             lblRG.Text = Session["rg"].ToString();
             lblCelular.Text = Session["celular"].ToString();
-
+           
+            //Session.Remove("email");
             
 
         }
@@ -63,8 +64,7 @@ namespace Site.Pages
             {
                 c.Nome = Session["nome"].ToString();
             }
-           
-
+ 
             //confere se compo cpf foi preenchido
             if(c.CPF.Equals(msg))
             {
@@ -103,26 +103,23 @@ namespace Site.Pages
            
 
             c.Passaporte = c.CPF;
+            Session["email"] = c.Email;
 
             cliente.Cadastrar(c.Email, c.Senha, c.Nome, c.CPF, c.DataNascimento, c.NCarteiraHabilitacao, c.Telefone, c.RG, c.Passaporte, c.Celular);
           
             lblMensagem.Text = cliente.mensagem;
-            lblMensagem.Text = cliente.mensagem1;
 
+            Session.Remove("senha");
 
-            if (cliente.mensagem1.Equals(msg))
-            {
-                Session.Remove("senha");
-                Session.Remove("email");
-                Session.Remove("nome");
-                Session.Remove("cpf");
-                Session.Remove("datanascimento");
-                Session.Remove("cnh");
-                Session.Remove("telefone");
-                Session.Remove("rg");
-                Session.Remove("celular");
-            }
-        
+            Response.Redirect("/Pages/areacliente.aspx");
+
+            Session.Remove("nome");
+            Session.Remove("cpf");
+            Session.Remove("datanascimento");
+            Session.Remove("cnh");
+            Session.Remove("telefone");
+            Session.Remove("rg");
+            Session.Remove("celular");
 
         }
     }

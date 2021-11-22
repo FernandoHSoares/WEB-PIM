@@ -37,8 +37,40 @@ namespace Site.Pages
 
             if (txSenha.Text.Equals(txConfSenha.Text))
             {
+                ClienteDAL clie = new ClienteDAL();
+                string MsgVerifica = "";
 
-                Response.Redirect("/Pages/confirmacao-cliente.aspx");
+                clie.VerificaEmail(txEmail.Text);
+                clie.VerificaCPF(txCPF.Text);
+                clie.VerificaCNH(txNumCNH.Text);
+                clie.VerificaRG(txRG.Text);
+                clie.VerificaPassaporte(txCPF.Text);
+
+                if(clie.msgemail.Equals(MsgVerifica) && clie.msgcpf.Equals(MsgVerifica)&& clie.msgrg.Equals(MsgVerifica)&& clie.msgcnh.Equals(MsgVerifica)&&clie.msgpassaporte.Equals(MsgVerifica))
+                {
+                    Response.Redirect("/Pages/confirmacao-cliente.aspx");
+                }
+                else if(!clie.msgemail.Equals(MsgVerifica)) 
+                {
+                    lblMensagem.Text = clie.msgemail;
+                }
+                else if (!clie.msgcpf.Equals(MsgVerifica))
+                {
+                    lblMensagem.Text = clie.msgcpf;
+
+                }else if (!clie.msgrg.Equals(MsgVerifica))
+                {
+                    lblMensagem.Text = clie.msgrg;
+
+                }else if (!clie.msgcnh.Equals(MsgVerifica))
+                {
+                    lblMensagem.Text = clie.msgcnh;
+                }
+                else if (!clie.msgpassaporte.Equals(MsgVerifica))
+                {
+                    lblMensagem.Text = clie.msgpassaporte;
+                }
+
             }
             else
             {

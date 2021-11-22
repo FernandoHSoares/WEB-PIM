@@ -30,11 +30,11 @@ namespace Site.Pages
             string email = txEmail.Text;
             string senha = txSenha.Text;
 
-            cliente.VerificaLogin(email, senha);
+            cliente.Login(email, senha);
 
             if (cliente.tem == confirma)
             {
-                
+                Session["email"] = txEmail.Text;
                 Response.Redirect("/Pages/areacliente.aspx");
             }
             else 

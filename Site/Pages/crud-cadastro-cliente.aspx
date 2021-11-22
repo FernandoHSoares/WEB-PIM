@@ -44,45 +44,39 @@
 
       <!-- fomulario -->
       <div class="cliente-crud-box">
-        <label>E-mail:</label> <br>
-        <input type="text" placeholder="Ex: joaodasilva@gmail.com">
+        <label>E-mail:</label> <br>   
+        <asp:TextBox ID="txemail" runat="server" TextMode="Email" placeholder="Ex: joaodasilva@gmail.com" ></asp:TextBox>
         <br><br>
+
         <label>Senha:</label> <br>
-        <input type="password" placeholder="Sua Senha de Login do Site">
+        <asp:TextBox ID="txsenha" runat="server" TextMode="Password" placeholder="Sua Senha de Login do Site" ></asp:TextBox>
         <br><br>
-        <label>Nome Completo*:</label> <br>
-        <input type="text" placeholder="Ex: joaodasilva@gmail.com">
+
+        <label>Nome Completo*:</label> <br>      
+        <asp:TextBox ID="txnome" runat="server" placeholder="João Francisco Cunha" ></asp:TextBox>
         <br><br>
-        <label>CPF ou Passaporte*:</label> <br>
-        <input type="password" placeholder="Sua Senha de Login do Site">
-        <br> <br>
-        <label>Data de Nascimento*:</label> <br>
-        <input type="text" placeholder="Ex: joaodasilva@gmail.com">
-        <br><br>
-        <label>Número da CNH (Carteira de Habilitação)*:</label> <br>
-        <input type="password" placeholder="Sua Senha de Login do Site">
-        <br> <br>
+       
         <label>Telefone/Celular 1*:</label> <br>
-        <input type="text" placeholder="Ex: joaodasilva@gmail.com">
+        <asp:TextBox ID="txtelefone" runat="server" TextMode="Number" placeholder="telefone de contato" ></asp:TextBox>
         <br><br>
+
         <label>Telefone/Celular 2 (Opcional):</label> <br>
-        <input type="password" placeholder="Sua Senha de Login do Site">
+        <asp:TextBox ID="txcelular" runat="server" TextMode="Number" placeholder="telefone de contato" ></asp:TextBox>
         <br> <br>
-        <label>Telefone/Celular 3 (Opcional):</label> <br>
-        <input type="text" placeholder="Ex: joaodasilva@gmail.com">
-        <br> <br>
+
+        
         <p>
           *Obrigatório <br>
           **Não Insira . - (Pontos e Traço)
         </p> <br>
-
+         <p> <asp:Label ID="lblmensagem" runat="server" ></asp:Label> </p>
         <a href="#">
           <button class="btn-1" type="submit">Atualizar</button>
         </a>
         <br> <br>
-        
-          <a class="btn-delete"> <button runat="server" onserverclick="BtnEexcluir_conta">Excluir Conta</button> </a> 
-        
+        <a href="#" >
+          <button  class="btn-delete" runat="server" onserverclick="BtnEexcluir_conta">Excluir Conta</button>
+        </a>
       </div>
 
     </div>

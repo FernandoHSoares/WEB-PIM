@@ -46,7 +46,7 @@
       
       <br><br>
       <label>Nome Completo*:</label> <br>
-      <asp:TextBox ID="txNome" runat="server" placeholder="Ex: Joao da silva"></asp:TextBox>
+      <asp:TextBox ID="txNome" runat="server" k placeholder="Ex: Joao da silva"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredNome" runat="server" ControlToValidate="txNome" ErrorMessage="Por favor digite seu nome completo" ForeColor="Red" ></asp:RequiredFieldValidator>
 
       <br /><br />
@@ -99,7 +99,7 @@
       <br><br>
       <label>Celular*:</label> <br>
       <asp:TextBox ID="txCelular" runat="server" TextMode="Phone" placeholder="celular" ></asp:TextBox>
-      <asp:RequiredFieldValidator ID="RequiredCelular" runat="server" ControlToValidate="txCelular" ErrorMessage="Por favor digite um celular" ForeColor="Red" ></asp:RequiredFieldValidator>
+      
       
      
       <br><br>    
@@ -109,6 +109,7 @@
       </p> <br>
         <p>
             <asp:Label ID="lblMensagem" runat="server" ForeColor="Red"></asp:Label>
+
 
         </p>
       
