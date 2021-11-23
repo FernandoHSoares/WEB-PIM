@@ -8,6 +8,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Editar Cadastro de Cliente</title>
 </head>
 
@@ -57,11 +62,11 @@
         <br><br>
        
         <label>Telefone/Celular 1*:</label> <br>
-        <asp:TextBox ID="txtelefone" runat="server" TextMode="Number" placeholder="telefone de contato" ></asp:TextBox>
+        <asp:TextBox ID="txtelefone" runat="server" placeholder="telefone de contato" onkeypress="$(this).mask('(00) 0000-00009')" ></asp:TextBox>
         <br><br>
 
         <label>Telefone/Celular 2 (Opcional):</label> <br>
-        <asp:TextBox ID="txcelular" runat="server" TextMode="Number" placeholder="telefone de contato" ></asp:TextBox>
+        <asp:TextBox ID="txcelular" runat="server" placeholder="telefone de contato" onkeypress="$(this).mask('(00) 0000-00009')"></asp:TextBox>
         <br> <br>
 
         
@@ -71,7 +76,7 @@
         </p> <br>
          <p> <asp:Label ID="lblmensagem" runat="server" ></asp:Label> </p>
         <a href="#">
-          <button class="btn-1" type="submit">Atualizar</button>
+          <button class="btn-1" runat="server" onserverclick="BtnAtualizar" >Atualizar</button>
         </a>
         <br> <br>
         <a href="#" >

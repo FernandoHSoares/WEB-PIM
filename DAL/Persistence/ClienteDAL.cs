@@ -16,6 +16,7 @@ namespace DAL.Persistence
         //String de conexão com banco de dados!
         const string strConexao = @"Data Source=DESKTOP-4HDM4D7\SQLEXPRESS;Initial Catalog=BD_Alucar;Integrated Security=True";
 
+        
         const string Query = "";
         public bool tem;
         public string mensagem = "";
@@ -24,6 +25,16 @@ namespace DAL.Persistence
         public string msgrg = "";
         public string msgpassaporte = "";
         public string msgcnh = "";
+
+        public string Nome;
+        public string Email;
+        public string Telefone;
+        public string Celular;
+        public string DNascimento;
+        public string CNH;
+        public string CPF;
+        
+
 
         SqlDataReader dr;
 
@@ -299,7 +310,193 @@ namespace DAL.Persistence
             }
             return msgpassaporte;
         }
+
+        //Altera o email do cliente
+        public string AlterarEmail(string dado, string email)
+        {
+            SqlConnection con = new SqlConnection(strConexao);
+
+            string Query = @"UPDATE  Clientes SET email = @dado WHERE email = @email";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@dado", dado);
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+                
+                con.Close();
+                dr.Close();
+                this.mensagem = "dados alterados com sucesso!";
+            }
+            catch (SqlException)
+            {
+
+                this.mensagem = "Erro ao alterar dados!";
+            }
+
+            return mensagem;
+        }
+
+        //Altera a senha do cliente
+        public string AlterarSenha(string senha, string login)
+        {
+            SqlConnection con = new SqlConnection(strConexao);
+
+            string Query = @"UPDATE  Clientes SET senha = @senha WHERE email = @email";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@email", login);
+            cmd.Parameters.AddWithValue("@senha", senha);
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+
+                con.Close();
+                dr.Close();
+                this.mensagem = "dados alterados com sucesso!";
+            }
+            catch (SqlException ex)
+            {
+
+                this.mensagem = "Falha ao alterar senha! " + ex.Message;
+            }
+
+            return mensagem;
+        }
+
+        //Altera o telefone do cliente
+        public string AlterarTelefone(string telefone, string login)
+        {
+            SqlConnection con = new SqlConnection(strConexao);
+
+            string Query = @"UPDATE  Clientes SET telefone = @telefone WHERE email = @email";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@email", login);
+            cmd.Parameters.AddWithValue("@telefone", telefone);
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+
+                con.Close();
+                dr.Close();
+                this.mensagem = "dados alterados com sucesso!";
+            }
+            catch (SqlException ex)
+            {
+
+                this.mensagem = "Falha ao alterar nome! " + ex.Message;
+            }
+
+            return mensagem;
+        }
+
+        //Altera o nome do cliente
+        public string AlterarNome(string nome, string login)
+        {
+            SqlConnection con = new SqlConnection(strConexao);
+
+            string Query = @"UPDATE  Clientes SET nome = @nome WHERE email = @email";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@email", login);
+            cmd.Parameters.AddWithValue("@nome", nome);
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+
+                con.Close();
+                dr.Close();
+                this.mensagem = "dados alterados com sucesso!";
+            }
+            catch (SqlException ex)
+            {
+
+                this.mensagem = "Falha ao alterar nome! " + ex.Message;
+            }
+
+            return mensagem;
+        }
+
+        //Altera o celular  do cliente
+        public string AlterarCelular(string celular, string login)
+        {
+            SqlConnection con = new SqlConnection(strConexao);
+
+            string Query = @"UPDATE  Clientes SET celular = @celular WHERE email = @email";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@email", login);
+            cmd.Parameters.AddWithValue("@celular", celular);
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+
+                con.Close();
+                dr.Close();
+                this.mensagem = "dados alterados com sucesso!";
+            }
+            catch (SqlException ex)
+            {
+
+                this.mensagem = "Falha ao alterar celular! " + ex.Message;
+            }
+
+            return mensagem;
+        }
+
+        //imprime os dados do cliente
+        public string ImprimirCadastro(string email)
+       {
+           
+            
+            SqlConnection con = new SqlConnection(strConexao);
+
+            string Query = @"SELECT nome, email, telefone, celular, datadenascimento, cnh, cpf from dbo.Clientes WHERE email = @email";
+
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@email", email);
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+                Nome = dr.GetString(0);
+                Email = dr.GetString(1);
+                Telefone = dr.GetString(2);
+                Celular = dr.GetString(3);
+                DNascimento = dr.GetString(4);
+                CNH = dr.GetString(5);
+                CPF = dr.GetString(6);
+
+                
+
+                con.Close();
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+
+                mensagem = "Erro na busca de dados! " + ex;
+            }
+
+            return Nome + Email + Telefone + Celular + DNascimento + CNH + CPF;
+           
+
+
+
+
+        }
     }
+
 }
 
 

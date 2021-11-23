@@ -10,10 +10,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Confirmação de Cadastro</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   
 </head>
 
 <body>
   <form id="form1" runat="server">
+
   <!-- Navbar -->
   <header>
     <nav class="navbar">
@@ -63,7 +71,7 @@
             <div class="cont-confirme">
               <p class="email-par">Nome Completo*:</p>
              &nbsp&nbsp <asp:Label ID="lblNome" runat="server"></asp:Label>
-              <asp:TextBox ID="txNome" runat="server" ></asp:TextBox>
+              <asp:TextBox ID="txNome" runat="server"  ></asp:TextBox>
             </div>
           </div>
         <br />
@@ -71,7 +79,7 @@
             <div class="cont-confirme">
               <p class="email-par">CPF ou Passaporte*/**:</p>
              &nbsp&nbsp <asp:Label ID="lblCPF" runat="server"></asp:Label>
-              <asp:TextBox ID="txCPF" TextMode="Number" runat="server"  ></asp:TextBox>
+              <asp:TextBox ID="txCPF" runat="server" minlength="14" maxlength="14" onkeypress="$(this).mask('000.000.000-00');" ></asp:TextBox>
             </div>
           </div>
             <br />
@@ -79,7 +87,7 @@
             <div class="cont-confirme">
               <p class="email-par">RG:</p>
              &nbsp&nbsp <asp:Label ID="lblRG" runat="server"></asp:Label>
-              <asp:TextBox ID="txRG" TextMode="Number" runat="server" ></asp:TextBox>
+              <asp:TextBox ID="txRG" minlength="8" maxlength="9" runat="server" onkeypress="$(this).mask('00.000.000-0');" ></asp:TextBox>
             </div>
           </div>
 
@@ -97,7 +105,7 @@
             <div class="cont-confirme">
               <p class="email-par">Número da CNH (Carteira Habilitação)*:</p>
               &nbsp&nbsp<asp:Label ID="lblNumCNH" runat="server" ></asp:Label>
-              <asp:TextBox ID="txCNH" TextMode="Number" runat="server" ></asp:TextBox>
+              <asp:TextBox ID="txCNH" TextMode="Number" runat="server" onkeypress="$(this).mask('00000000000');"></asp:TextBox>
             </div>
           </div>
 
@@ -106,7 +114,7 @@
             <div class="cont-confirme">
               <p class="email-par">Telefone/Celular 1*:</p>
               &nbsp&nbsp<asp:Label ID="lblTelefone" runat="server" ></asp:Label>
-              <asp:TextBox ID="txTelefone" runat="server" ></asp:TextBox>
+              <asp:TextBox ID="txTelefone" runat="server" onkeypress="$(this).mask('(00) 0000-00009')" ></asp:TextBox>
             </div>
           </div>
 
@@ -115,18 +123,13 @@
             <div class="cont-confirme">
               <p class="email-par">Telefone/Celular 2 (Opcional):</p>
               &nbsp&nbsp<asp:Label ID="lblCelular" runat="server"></asp:Label>
-              <asp:TextBox ID="txcel" runat="server" ></asp:TextBox>
+              <asp:TextBox ID="txcel" runat="server" onkeypress="$(this).mask('(00) 0000-00009')"></asp:TextBox>
 
             </div>
           </div>
 
             <br />
-          <div class="box-1">
-            <div class="cont-confirme">
-              &nbsp&nbsp<p class="email-par">Telefone/Celular 3 (Opcional):</p>
-              <asp:TextBox ID="txcel2" runat="server" ></asp:TextBox>
-            </div>
-          </div>
+
           <br>
           <p>*Obrigatório <br>
             **Não Insira .- (Pontos e Traços)

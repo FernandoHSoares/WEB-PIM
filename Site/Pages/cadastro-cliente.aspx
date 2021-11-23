@@ -9,6 +9,15 @@
   <meta http-equiv="X-UA-Compatible; Content-Type" content="IE=edge; text/html" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+   
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    
   <title>Cadastro de Cliente</title>
 </head>
 
@@ -34,6 +43,7 @@
   </header>
 
   <!-- Login -->
+      
   <div class="container-cad">
     <div class="form-cad">
       <div class="title-cliente">
@@ -43,7 +53,7 @@
       </div>
 
       <!-- fomulario -->
-      
+     
       <br><br>
       <label>Nome Completo*:</label> <br>
       <asp:TextBox ID="txNome" runat="server" k placeholder="Ex: Joao da silva"></asp:TextBox>
@@ -68,19 +78,19 @@
       
       <br><br>
       <label>CPF ou Passaporte*:</label> <br>
-      <asp:TextBox ID="txCPF" runat="server" TextMode="Number" placeholder="CPF ou Passaporte" ></asp:TextBox>
+      <asp:TextBox ID="txCPF" runat="server" placeholder="CPF ou Passaporte" minlength="14" maxlength="14" onkeypress="$(this).mask('000.000.000-00');"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredCPF" runat="server" ControlToValidate="txCPF" ErrorMessage="Por favor digite o seu CPF" ForeColor="Red" ></asp:RequiredFieldValidator>
      
         
       <br><br>
       <label>RG*:</label> <br>
-      <asp:TextBox ID="txRG" runat="server" TextMode="Number" placeholder="RG" ></asp:TextBox>
+      <asp:TextBox ID="txRG" runat="server" placeholder="RG" onkeypress="$(this).mask('00.000.000-0');" ></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredRG" runat="server" ControlToValidate="txRG" ErrorMessage="Por favor digite Seu RG" ForeColor="Red" ></asp:RequiredFieldValidator>
      
         
       <br><br>
       <label>Numero da CNH*:</label> <br>
-      <asp:TextBox ID="txNumCNH" runat="server" TextMode="Number" placeholder="46554485566" ></asp:TextBox>
+      <asp:TextBox ID="txNumCNH" runat="server" placeholder="45878547854" onkeypress="$(this).mask('00000000000');"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredNumCNH" runat="server" ControlToValidate="txNumCNH" ErrorMessage="Por favor digite o numero da CNH" ForeColor="Red" ></asp:RequiredFieldValidator>
       
         
@@ -92,13 +102,13 @@
         
       <br> <br>
       <label>Telefone/Celular 1*:</label> <br>
-      <asp:TextBox ID="txTel1" runat="server" TextMode="Phone" Placeholder="988988989" ></asp:TextBox>
+      <asp:TextBox ID="txTel1" runat="server" TextMode="Phone" Placeholder="(11)98898-8989" onkeypress="$(this).mask('(00) 0000-00009')"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredTel1" runat="server" ControlToValidate="txTel1" ErrorMessage="Por favor digite seu telefone" ForeColor="Red" ></asp:RequiredFieldValidator>
       
         
       <br><br>
       <label>Celular*:</label> <br>
-      <asp:TextBox ID="txCelular" runat="server" TextMode="Phone" placeholder="celular" ></asp:TextBox>
+      <asp:TextBox ID="txCelular" runat="server" TextMode="Phone" placeholder="(11)98898-8989" onkeypress="$(this).mask('(00) 0000-00009')" ></asp:TextBox>
       
       
      
@@ -116,10 +126,10 @@
         
        <button  class="btn-1" runat="server" onserverclick="btnProsseguir" >PROSSEGUIR</button>
       
-
-    </div>
+          
+   
   </div>
-
+      </div>
   <!-- Footer -->
   <div class="max-width">
     <div class="content-2">
