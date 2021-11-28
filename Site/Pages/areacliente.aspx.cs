@@ -13,5 +13,16 @@ namespace Site
         {
 
         }
+
+        protected void btnAlugar(object sender, EventArgs e)
+        {
+            Response.Redirect("/Pages/reserva-veiculo.aspx");
+        }
+
+        protected void btnSair(object sender, EventArgs e)
+        {
+            Response.Redirect("/Pages/Paginainicial.aspx");
+            Session.Remove("email");
+        }
     }
 }

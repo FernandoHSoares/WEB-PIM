@@ -22,7 +22,7 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt=""></a>
+        <a class="nav-user-icon" href="areacliente.aspx"><img src="img/user.png" alt=""></a>
         <li><a href="Paginainicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
@@ -48,13 +48,24 @@
 
       <div class="form-reserva">
         <form>
-          <label for="dataR">Data de Retirada*:</label> <br>
+          <label for="dataR">Data de Retirada*:</label> <br/>
           <input type="text" id="dataR" name="dataR" placeholder="Ex: 01/01/2021"><br><br>
 
           <label for="dataE">Data da Entrega*:</label> <br>
           <input type="text" id="dataE" name="dataE" placeholder="Ex: 01/01/2021"><br><br>
 
-          <label for="carroR">Carro a Ser Reservado*:</label> <br>
+         
+        </form>
+      </div>
+      <br>
+
+
+         <div class="container-confirme">
+        <div class="box-confirme">
+          <div >
+            <div class="cont-confirme">
+           <label for="carroR">Carro a Ser Reservado*:</label> <br>
+         
           <select class="reserva-cars" id="carroR" name="carroR">
             <option class="none-reserva" value="volvo">NONE</option>
             <option value="clio">CLIO</option>
@@ -63,9 +74,10 @@
             <option value="duster">DUSTER</option>
             <option value="fusion">FUSION</option>
           </select>
-        </form>
-      </div>
-      <br>
+                <br /> <br />
+            </div>
+          </div>
+
 
       <div class="container-confirme">
         <div class="box-confirme">
@@ -73,7 +85,7 @@
             <div class="cont-confirme">
               <p class="email-par">Valor por Diária:</p>
               <p class="reserva-car">R$300,00</p>
-            </div>
+                            </div>
           </div>
 
           <div class="box-1">

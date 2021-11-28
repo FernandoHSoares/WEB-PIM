@@ -21,7 +21,7 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt="img"></a>
+        <a class="nav-user-icon" href="#" runat="server" onserverclick="btnAreaCliente" ><img src="img/user.png" alt="img"></a>
         <li><a href="Paginainicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
@@ -58,7 +58,7 @@
         débito, também aceitamos Pix
       </p>
     </div>
-    <a class="btn-alugue" href="#"><button>ALUGUE JÁ</button></a>
+    <a class="btn-alugue" href="#"><button runat="server" onserverclick="Alugar_ServerClick" >ALUGUE JÁ</button></a>
 
   </div>
 

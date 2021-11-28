@@ -22,13 +22,13 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt=""></a>
+        <a class="nav-user-icon" href="#" runat="server" onserverclick="btnAreaClie"><img src="img/user.png" alt=""></a>
         <li><a href="Paginainicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
       </ul>
-         <a class="nav-btn"> <button  runat="server" onserverclick="Opentelalo_ServerClick">Alugar</button> </a>
+         <a class="nav-btn"> <button  runat="server" onserverclick="OpenTelaLog">Alugar</button> </a>
        
     </nav>
   </header>
@@ -89,7 +89,7 @@
             débito, também aceitamos Pix
           </p>
         </div>
-        <a class="btn-alugue" href="#"><button>ALUGUE JÁ</button></a>
+        <a class="btn-alugue" href="#"><button runat="server" onserverclick="OpenTelaLog" >ALUGUE JÁ</button></a>
       </div>
 
       <div class="content-2">

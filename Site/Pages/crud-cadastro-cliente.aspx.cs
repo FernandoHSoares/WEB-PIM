@@ -84,5 +84,11 @@ namespace Site.Pages
                 Session["email"] = c.Email;
             }
         }
+
+        protected void btnAlugar(object sender, EventArgs e)
+        {
+           
+            Response.Redirect("/Pages/reserva-veiculo.aspx");
+        }
     }
 }

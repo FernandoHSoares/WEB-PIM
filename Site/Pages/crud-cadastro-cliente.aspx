@@ -27,13 +27,13 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt=""></a>
+        <a class="nav-user-icon" href="areacliente.aspx"><img src="img/user.png" alt=""></a>
         <li><a href="Paginainicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
       </ul>
-      <a href="#" class="nav-btn"><button>Alugar</button></a>
+      <a href="#" class="nav-btn"><button runat="server" onserverclick="btnAlugar" >Alugar</button></a>
     </nav>
   </header>
 

@@ -10,11 +10,34 @@ namespace Site
     public partial class PaginaInicial : System.Web.UI.Page
     {
 
-        protected void Opentelalo_ServerClick(object sender, EventArgs e)
+        public void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void OpenTelaLog(object sender, EventArgs e)
+        {
+            if (Session["email"] != null)
+            {
+                Response.Redirect("/Pages/reserva-veiculo.aspx");
+            }
+            else
+            {
+                Response.Redirect("/Pages/tela-log.aspx");
+            }
+        }
 
-            Response.Redirect("/Pages/tela-log.aspx");
+        protected void btnAreaClie(object sender, EventArgs e)
+        {
+            
+
+            if (Session["email"] != null)
+            {
+                Response.Redirect("/Pages/areacliente.aspx");
+            }
+            else
+            {
+                Response.Redirect("/Pages/tela-log.aspx");     
+            }
         }
     }
 }

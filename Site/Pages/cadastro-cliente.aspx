@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible; Content-Type" content="IE=edge; text/html" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-   
+
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -32,13 +32,13 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt=""></a>
+        <a class="nav-user-icon" href="tela-log.aspx"><img src="img/user.png" alt=""></a>
         <li><a href="Paginainicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
       </ul>
-      <a href="#" class="nav-btn"><button>Alugar</button></a>
+      <a href="tela-log.aspx" class="nav-btn"><button>Alugar</button></a>
     </nav>
   </header>
 
@@ -102,13 +102,13 @@
         
       <br> <br>
       <label>Telefone/Celular 1*:</label> <br>
-      <asp:TextBox ID="txTel1" runat="server" TextMode="Phone" Placeholder="(11)98898-8989" onkeypress="$(this).mask('(00) 0000-00009')"></asp:TextBox>
+      <asp:TextBox ID="txTel1" runat="server" TextMode="Phone" Placeholder="(11)98898-8989" onkeypress="$(this).mask('(00)0000-00009')"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredTel1" runat="server" ControlToValidate="txTel1" ErrorMessage="Por favor digite seu telefone" ForeColor="Red" ></asp:RequiredFieldValidator>
       
         
       <br><br>
       <label>Celular*:</label> <br>
-      <asp:TextBox ID="txCelular" runat="server" TextMode="Phone" placeholder="(11)98898-8989" onkeypress="$(this).mask('(00) 0000-00009')" ></asp:TextBox>
+      <asp:TextBox ID="txCelular" runat="server" TextMode="Phone" placeholder="(11)98898-8989" onkeypress="$(this).mask('(00)0000-00009')" ></asp:TextBox>
       
       
      

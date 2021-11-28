@@ -107,7 +107,7 @@ li {
     border-radius: 40px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 35;
+    font-size: 20;
 }
 
 button:hover {
@@ -476,10 +476,13 @@ button:hover {
     align-self: center;
 }
 
-.title-cliente .log {
-    margin-left: 200px;
+.title-cliente .log-cliente-f {
+    margin-left: 80px;
+    padding-bottom: 20px;
     font-weight: 500;
 }
+
+
 
 .title-cliente .log-01 {
     margin-top: 15px;
@@ -491,7 +494,7 @@ button:hover {
 }
 
 .log-box-content p {
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration-line: underline;
 }
 
@@ -535,6 +538,12 @@ input {
 .title-cliente .p-cliente {
     margin: 15px 0;
     margin-left: 80px;
+}
+
+.p-cliente-edit {
+    margin: 15px 0;
+    padding-bottom: 20px;
+    margin-left: 45px;
 }
 
 label {
@@ -1051,32 +1060,49 @@ a .btn-confirme-02 {
     font-size: 40px;
     font-weight: bold;
     margin: 25px 0;
+    padding-top: 2 px;
 }
 
 .table-box {
     max-width: 1333px;
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     width: 90%;
     margin: 7vh auto;
     padding: 50px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-    gap: 10px;
+    gap: 30px;
 }
+
+.table-cliente {
+    max-width: 1333px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 90%;
+    margin: 7vh auto;
+    padding: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    gap: 20px;
+}
+
 
 .table-crud {
     width: 100%;
+    
 }
 
-    .table-crud th {
-        height: 40px;
-        background-color: rgb(37, 221, 98);
-        padding: 0 15px;
+    .table-crud label {
+        /* height: 40px; */
+        /* background-color: rgb(37, 221, 98); */
+        margin-bottom: 25px;
         font-family: 'Roboto', sans-serif;
         font-size: 22px;
+        font-weight: 600;
     }
+
 
 .crud-button {
     background-color: rgb(223, 71, 33);
@@ -1088,5 +1114,25 @@ a .btn-confirme-02 {
 }
 
     .crud-button:hover {
+        background-color: rgb(211, 55, 16);
+    }
+
+/* -----------------------------------------------------  */
+/* Página Historico de Reserva  */
+.historico-box {
+    margin: 10px 50px;
+}
+
+.btn-edit-reserva {
+    background-color: rgb(223, 71, 33);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    margin-left: 50px;
+}
+
+    .btn-edit-reserva:hover {
         background-color: rgb(211, 55, 16);
     }

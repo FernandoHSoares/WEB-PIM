@@ -23,13 +23,13 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt="img"></a>
+        <a class="nav-user-icon" href="areacliente.aspx"><img src="img/user.png" alt="img"></a>
         <li><a href="pagina-inicial.html" class="menu-btn">Início</a></li>
         <li><a href="localizacao.html" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.html" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.html" class="menu-btn">Condições</a></li>
       </ul>
-      <a href="tela-log.html" class="nav-btn"><button>Alugar</button></a>
+      <a class="nav-btn"><button runat="server" onserverclick="btnAlugar" >Alugar</button></a>
     </nav>
   </header>
 
@@ -67,7 +67,7 @@
         débito, também aceitamos Pix
       </p>
     </div>
-    <a class="btn-alugue" href="#"><button>ALUGUE JÁ</button></a>
+    <a class="btn-alugue"><button runat="server" onserverclick="btnAlugar" >ALUGUE JÁ</button></a>
 
   </div>
 

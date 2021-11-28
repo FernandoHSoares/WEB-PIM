@@ -5,50 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using DAL.Model;
+using System.Data;
 
 namespace DAL.Persistence
 {
-    class VeiculoDAL 
+    public class VeiculoDAL 
     {
-       /* public List<Veiculo> Listar()
+
+        const string strConexao = @"Data Source=DESKTOP-4HDM4D7\SQLEXPRESS;Initial Catalog=BD_Alucar;Integrated Security=True";
+
+        SqlDataReader dr;
+        /*
+       
+        public DataTable Listar()
         {
-            try
-            {
-                AbrirConexao();
-                Cmd = new SqlCommand("select * from veiculos", Con);
-                Dr = Cmd.ExecuteReader();
+            string Query = @"SELECT * FROM Veiculos ";
 
-                List<Veiculo> lista = new List<Veiculo>(); //Lista vazia
+            SqlConnection con = new SqlConnection(strConexao);
+            SqlCommand cmd = new SqlCommand(Query, con);
 
-                while (Dr.Read())
-                {
-                    Veiculo V = new Veiculo();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
 
-                    V.Categoria = Convert.ToString(Dr["Categoria"]);
-                    V.Modelo = Convert.ToString(Dr["Modelo"]);
-                    V.Placa = Convert.ToString(Dr["Placa"]);
-                    V.Marca = Convert.ToString(Dr["Marca"]);
-                    V.ID_carro = Convert.ToInt32(Dr["ID_Carro"]);
-                    V.Ano = Convert.ToInt32(Dr["Ano"]);
-                    V.Quilometragem = Convert.ToDouble(Dr["Quilometragem"]);
+            DataTable datatable = new DataTable();
+      
 
-                    lista.Add(V);
-                }
-                return lista;
-            }
-            catch (Exception ex)
-            {
 
-                throw new Exception("falha ao exibir veiculos" + ex.Message);
-            }
-            finally
-            {
-                FecharConexao();
-            }
-              
 
-            
-        }*/
+        }
+        */
     }
 }
             

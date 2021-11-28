@@ -23,7 +23,7 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt=""></a>
+        <a class="nav-user-icon" href="areacliente.aspx"><img src="img/user.png" alt=""></a>
         <li><a href="pagina-inicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
@@ -114,11 +114,11 @@
             </p>
             <br>
             <a href="#">
-              <button class="btn-1" type="submit">Atualizar</button>
+              <button class="btn-1" type="submit" runat="server" onserverclick="btnAtualizar" >Atualizar</button>
             </a>
             <br> <br>
             <a href="#">
-              <button class="btn-delete" type="submit">Excluir Conta</button>
+              <button class="btn-delete" type="submit">Excluir Reserva</button>
             </a>
             <br> <br> <br>
           </div>

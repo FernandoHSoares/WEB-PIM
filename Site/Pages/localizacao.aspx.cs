@@ -11,7 +11,26 @@ namespace Site.Pages
     {
         protected void alugar_ServerClick(object sender, EventArgs e)
         {
-            Response.Redirect("/Pages/tela-log.aspx");
+            if (Session["email"] != null)
+            {
+                Response.Redirect("/Pages/reserva-veiculo.aspx");
+            }
+            else
+            {
+                Response.Redirect("/Pages/tela-log.aspx");
+            }
+        }
+
+        protected void btnAreaCliente(object sender, EventArgs e)
+        {
+            if (Session["email"] != null)
+            {
+                Response.Redirect("/Pages/areacliente.aspx");
+            }
+            else
+            {
+                Response.Redirect("/Pages/tela-log.aspx");
+            }
         }
     }
 }

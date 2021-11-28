@@ -28,7 +28,7 @@
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
       </ul>
-      <a href="#" class="nav-btn"><button>Alugar</button></a>
+      <a href="#" class="nav-btn"><button runat="server" onserverclick="btnAlugar" >Alugar</button></a>
     </nav>
   </header>
 
@@ -48,7 +48,7 @@
         <p class="p_2"><a href="crud-reserva-veiculo.aspx">Editar Reservas</a></p> 
         <p class="p_4"><a href="pagina-crud-cliente.aspx">Informações do Cadastro</a></p>
         <p class="p_5"><a href="crud-cadastro-cliente.aspx">Editar Informações do Cadastro</a></p>
-        <p class="p_6"><a href="pagina-inicial.aspx">Sair</a></p>
+        <p class="p_6"><a href="#" runat="server" onserverclick="btnSair" >Sair</a></p>
       </div>
     </div>
   </div>

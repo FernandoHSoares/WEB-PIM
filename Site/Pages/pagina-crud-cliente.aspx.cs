@@ -19,18 +19,35 @@ namespace Site.Pages
             ClienteDAL clie = new ClienteDAL();
 
 
-            /*
+            
             clie.ImprimirCadastro(email);
             c.Nome = clie.Nome;
             c.CPF = clie.CPF;
-            c.DataNascimento = clie.DNascimento;
+            c.DataNascimento = clie.DNascimento.ToString();
             c.Email = clie.Email;
-            */
+            c.Celular = clie.Celular;
+            c.Telefone = clie.Telefone;
+            c.NCarteiraHabilitacao = clie.CNH;
 
             
+            lblTelefone1.Text = c.Telefone;
+            lblcelular.Text = c.Celular;
+            lblCPF.Text = c.CPF;
+            lblNome.Text = c.Nome;
+            lblDataNasc.Text = clie.DNascimento.ToString();
+            lblemail.Text = c.Email;
+            lblNumCNH.Text = c.NCarteiraHabilitacao;
 
-           
+        }
 
+        protected void BtnEditar(object sender, EventArgs e)
+        {
+            Response.Redirect("/Pages/crud-cadastro-cliente.aspx");
+        }
+
+        protected void btnAlugar(object sender, EventArgs e)
+        {
+           Response.Redirect("/Pages/reserva-veiculo.aspx");
         }
     }
 }

@@ -30,7 +30,7 @@ namespace DAL.Persistence
         public string Email;
         public string Telefone;
         public string Celular;
-        public string DNascimento;
+        public DateTime DNascimento;
         public string CNH;
         public string CPF;
         
@@ -72,7 +72,7 @@ namespace DAL.Persistence
             catch ( SqlException)
             {
 
-                this.mensagem = "erro com banco de dados! ";
+                this.mensagem = "erro ao efetuar cadastro! ";
             }
 
 
@@ -113,12 +113,11 @@ namespace DAL.Persistence
             catch (SqlException)
             {
 
-                this.mensagem = "Erro com banco de dados!";
+                this.mensagem = "Erro ao efetuar login, tente novamente!";
             }
             return tem;
         }
 
-        
         /// <summary>
         /// Metodo de exclusao de cliente
         /// </summary>
@@ -149,8 +148,47 @@ namespace DAL.Persistence
 
                return mensagem;
            }
-      
-        
+
+        //imprime os dados do cliente
+        public string ImprimirCadastro(string email)
+        {
+
+            SqlConnection con = new SqlConnection(strConexao);
+
+            string Query = @"SELECT nome, email, telefone, celular, datadenascimento, cnh, cpf from dbo.Clientes WHERE email = @email";
+
+            SqlCommand cmd = new SqlCommand(Query, con);
+            cmd.Parameters.AddWithValue("@email", email);
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+                Nome = dr.GetString(0);
+                Email = dr.GetString(1);
+                Telefone = dr.GetString(2);
+                Celular = dr.GetString(3);
+                DNascimento = dr.GetDateTime(4);
+                CNH = dr.GetString(5);
+                CPF = dr.GetString(6);
+
+
+
+                con.Close();
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+
+                mensagem = "Erro na busca de dados! " + ex;
+            }
+
+            return Nome + Email + Telefone + Celular + DNascimento + CNH + CPF;
+
+        }
+
         //Verifica se o email ja esta cadastrado
         public string VerificaEmail(string email)
         {
@@ -451,50 +489,8 @@ namespace DAL.Persistence
             return mensagem;
         }
 
-        //imprime os dados do cliente
-        public string ImprimirCadastro(string email)
-       {
-           
-            
-            SqlConnection con = new SqlConnection(strConexao);
-
-            string Query = @"SELECT nome, email, telefone, celular, datadenascimento, cnh, cpf from dbo.Clientes WHERE email = @email";
-
-            SqlCommand cmd = new SqlCommand(Query, con);
-            cmd.Parameters.AddWithValue("@email", email);
-
-            try
-            {
-                con.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-
-                Nome = dr.GetString(0);
-                Email = dr.GetString(1);
-                Telefone = dr.GetString(2);
-                Celular = dr.GetString(3);
-                DNascimento = dr.GetString(4);
-                CNH = dr.GetString(5);
-                CPF = dr.GetString(6);
-
-                
-
-                con.Close();
-                dr.Close();
-            }
-            catch (Exception ex)
-            {
-
-                mensagem = "Erro na busca de dados! " + ex;
-            }
-
-            return Nome + Email + Telefone + Celular + DNascimento + CNH + CPF;
-           
-
-
-
-
-        }
+        
+       
     }
 
 }

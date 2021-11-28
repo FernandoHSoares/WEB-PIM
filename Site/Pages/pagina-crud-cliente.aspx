@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="pagina-crud-cliente.aspx.cs" Inherits="Site.Pages.pagina_crud_cliente" %>
 
 <!DOCTYPE html>
-
 <html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 
   <head runat="server">
@@ -23,13 +22,13 @@
       </div>
 
       <ul class=" menu">
-        <a class="nav-user-icon" href="#"><img src="img/user.png" alt="img"></a>
-        <li><a href="Paginainicial.aspx" class="menu-btn">Início</a></li>
+        <a class="nav-user-icon" href="areacliente.aspx"><img src="img/user.png" alt="img"></a>
+        <li><a href="PaginaInicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
       </ul>
-      <a href="tela-log.html" class="nav-btn"><button>Alugar</button></a>
+      <a class="nav-btn" href="#"><button runat="server" onserverclick="btnAlugar">Alugar</button></a>
     </nav>
   </header>
 
@@ -37,42 +36,74 @@
 
   <div class="tabela">
     <p class="info-cad-title">Informações de Cadastro</p>
-    <div class="table-box">
-      <table class="table-crud">
-        <thead>
-          <tr>
-            <th>Nome Completo</th>
-            <th>E-mail</th>
-          </tr>
-        </thead>
-      </table>
+     
+    <div class="table-cliente">
+      <div class="table-crud">
 
-      <br> <br>
+          
+          <div class="cont-confirme">
+          <label>Nome Completo </label> <br/>
+          <asp:Label ID="lblNome" runat="server" ></asp:Label>
+        </div><br />
+
+        <div class="cont-confirme"><label>Email</label> <br>
+          <asp:Label ID="lblemail" runat="server" ></asp:Label>
+        </div><br />
+
+        <div class="cont-confirme">
+          <label>Data Nascimento </label> <br>
+          <asp:Label ID="lblDataNasc" runat="server" ></asp:Label>
+        </div><br />
+
+         <div class="box-confirme">
+            <label>Telefone/Celular 1 </label> <br/>
+            <asp:Label ID="lblTelefone1" runat="server" ></asp:Label>
+          </div><br />
+
+          <div class="box-1"><label>Telefone/Celular 2(Opcional)</label> <br/>
+            <asp:Label ID="lblcelular" runat="server" ></asp:Label>
+          </div><br />
+
+          <div><label>Número da CNH</label> <br/>
+            <asp:Label ID="lblNumCNH" runat="server" ></asp:Label>
+          </div><br />
+
+          <div><label>CPF ou Passaporte</label> <br/>
+            <asp:Label ID="lblCPF" runat="server"></asp:Label>
+          </div>  
+       
+      </div>
+          
+        </div>
+       
+      <br/>
       <!-- --------------------------------------- -->
-      <table class="table-crud">
-        <thead>
-          <tr>
-            <th>Telefone/Celular 1</th>
-            <th>Telefone/Celular 2(Opcional)</th>
-          </tr>
-        </thead>
-      </table>
-      <br><br>
+      
+             
+          <a ><button type="button" class="crud-button" runat="server" onserverclick="BtnEditar" >Editar Cadastro</button></a>
+      </div>
+
+      <br>
+      
       <!-- --------------------------------------------------- -->
-      <table class="table-crud">
-        <thead>
-          <tr>
-            <th>Data Nascimento</th>
-            <th>Número da CNH</th>
-            <th>CPF ou Passaporte</th>
-          </tr>
-        </thead>
-      </table>
-      <a href="crud-cadastro-cliente.html"><button type="button" class="crud-button">Editar Cadastro</button></a>
+      <!-- <div class="table-crud">
+        <div>
+          <label>Data Nascimento </label> <br>
+          <textarea id="" cols="30" rows="1"></textarea>
+        </div>
+        <div><label>Número da CNH</label> <br>
+          <textarea id="" cols="30" rows="1"></textarea>
+        </div>
+        <div><label>CPF ou Passaporte</label> <br>
+          <textarea id="" cols="30" rows="1"></textarea>
+        </div>
+
+      </div> -->
+
 
     </div>
 
-  </div>
+ 
 
   <!-- ------------------------------------------- -->
   <div class="content-1">
@@ -83,7 +114,7 @@
         débito, também aceitamos Pix
       </p>
     </div>
-    <a class="btn-alugue" href="#"><button>ALUGUE JÁ</button></a>
+    <a class="btn-alugue" href="#"><button runat="server" onserverclick="btnAlugar" >ALUGUE JÁ</button></a>
 
   </div>
 
