@@ -28,12 +28,14 @@ namespace Site.Pages
 
             string msg = "";
 
+            Session.Remove("email");
+
             if (clie.mensagem.Equals(msg))
             {
-
+                
                 lblmensagem.Text = "cadastro excluido!";
                 Response.Redirect("/Pages/Paginainicial.aspx");
-                Session.Remove("email");
+                
                 
             }
             else

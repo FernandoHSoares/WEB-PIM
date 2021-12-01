@@ -47,6 +47,7 @@
   <div class="container-cad">
     <div class="form-cad">
       <div class="title-cliente">
+          <div class="user-confirme">
         <img src="img/Login-Cliente-img/user_1.png" alt="img">
         <img class="img-cliente" src="img/Login-Cliente-img/Cadastro de Cliente.png" img">
         <p class="p-cliente">Cadastro de Cliente Físico</p>
@@ -77,11 +78,16 @@
 
       
       <br><br>
-      <label>CPF ou Passaporte*:</label> <br>
-      <asp:TextBox ID="txCPF" runat="server" placeholder="CPF ou Passaporte" minlength="14" maxlength="14" onkeypress="$(this).mask('000.000.000-00');"></asp:TextBox>
+      <label>CPF*:</label> <br>
+      <asp:TextBox ID="txCPF" runat="server" placeholder="CPF" minlength="14" maxlength="14" onkeypress="$(this).mask('000.000.000-00');"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredCPF" runat="server" ControlToValidate="txCPF" ErrorMessage="Por favor digite o seu CPF" ForeColor="Red" ></asp:RequiredFieldValidator>
      
-        
+
+        <br><br>
+      <label>Passaporte:</label> <br>
+      <asp:TextBox ID="txpassaporte" runat="server" placeholder="Passaporte" minlength="8" maxlength="8"></asp:TextBox>
+     
+
       <br><br>
       <label>RG*:</label> <br>
       <asp:TextBox ID="txRG" runat="server" placeholder="RG" onkeypress="$(this).mask('00.000.000-0');" ></asp:TextBox>
@@ -127,9 +133,10 @@
        <button  class="btn-1" runat="server" onserverclick="btnProsseguir" >PROSSEGUIR</button>
       
           
-   
+   </div>
   </div>
       </div>
+
   <!-- Footer -->
   <div class="max-width">
     <div class="content-2">

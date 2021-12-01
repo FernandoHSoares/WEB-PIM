@@ -42,7 +42,7 @@
     <div class="form-cad">
       <div class="title-cliente">
         <img src="img/Login-Cliente-img/user_1.png" alt="img">
-        <img class="img-cliente" src="img/Editar Cadastro de Cliente.png" img">
+        <img class="img-cliente" src="img/EditarCadastrodeCliente.png">
         <p class="p-cliente">Atualização de Cadastro do Cliente</p>
         <br>
       </div>
@@ -62,11 +62,11 @@
         <br><br>
        
         <label>Telefone/Celular 1*:</label> <br>
-        <asp:TextBox ID="txtelefone" runat="server" placeholder="telefone de contato" onkeypress="$(this).mask('(00) 0000-00009')" ></asp:TextBox>
+        <asp:TextBox ID="txtelefone" runat="server" placeholder="telefone de contato" onkeypress="$(this).mask('(00)0000-00009')" ></asp:TextBox>
         <br><br>
 
         <label>Telefone/Celular 2 (Opcional):</label> <br>
-        <asp:TextBox ID="txcelular" runat="server" placeholder="telefone de contato" onkeypress="$(this).mask('(00) 0000-00009')"></asp:TextBox>
+        <asp:TextBox ID="txcelular" runat="server" placeholder="telefone de contato" onkeypress="$(this).mask('(00)0000-00009')"></asp:TextBox>
         <br> <br>
 
         

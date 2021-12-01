@@ -24,7 +24,7 @@
 
       <ul class=" menu">
         <a class="nav-user-icon" href="areacliente.aspx"><img src="img/user.png" alt=""></a>
-        <li><a href="pagina-inicial.aspx" class="menu-btn">Início</a></li>
+        <li><a href="PaginaInicial.aspx" class="menu-btn">Início</a></li>
         <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
         <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
         <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
@@ -38,7 +38,7 @@
     <div class="form">
       <div class="title-confirme">
         <div class="cad-confirme">
-          <img class="reserva-title" src="img/Editar Reservar Veículo.png">
+          <img class="reserva-title" src="img/EditarReservarVeículo.png">
         </div>
         <p class="title-par-crud">Atualizar a Reserva de Veículo</p>
 
@@ -57,7 +57,16 @@
             <label for="dataE">Data da Entrega*:</label> <br>
             <input type="text" id="dataE" name="dataE" placeholder="Ex: 01/01/2021"><br><br>
 
-            <label for="carroR">Carro a Ser Reservado*:</label> <br>
+          </form>
+        </div>
+        <br>
+
+
+           <div class="container-confirme">
+          <div >
+            <div class="box-1">
+              <div class="cont-confirme">
+                  <label for="carroR">Carro a Ser Reservado*:</label> <br>
             <select class="reserva-cars" id="carroR" name="carroR">
               <option class="none-reserva" value="volvo">NONE</option>
               <option value="clio">CLIO</option>
@@ -66,9 +75,9 @@
               <option value="duster">DUSTER</option>
               <option value="fusion">FUSION</option>
             </select>
-          </form>
-        </div>
-        <br>
+              </div>
+            </div>
+              <br /><br />
 
         <div class="container-confirme">
           <div class="box-confirme">

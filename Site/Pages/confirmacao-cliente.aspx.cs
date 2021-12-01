@@ -19,7 +19,7 @@ namespace Site.Pages
             
 
 
-            lblEmail.Text = Session["email"].ToString();
+            lblEmail.Text = Session["email1"].ToString();
             lblNome.Text = Session["nome"].ToString();
             lblDNasc.Text = Session["datanascimento"].ToString();
             lblTelefone.Text = Session["telefone"].ToString();
@@ -27,10 +27,8 @@ namespace Site.Pages
             lblNumCNH.Text = Session["cnh"].ToString();
             lblRG.Text = Session["rg"].ToString();
             lblCelular.Text = Session["celular"].ToString();
+            lblpassaporte.Text = Session["passaporte"].ToString();
            
-            //Session.Remove("email");
-            
-
         }
 
 
@@ -50,13 +48,14 @@ namespace Site.Pages
             c.Telefone = txTelefone.Text;
             c.RG = txRG.Text;
             c.Celular = txcel.Text;
+            c.Passaporte = txpassaporte.Text;
 
             
 
             //confere se compo email foi preenchido
             if (c.Email.Equals(msg))
             {
-                c.Email = Session["email"].ToString();
+                c.Email = Session["email1"].ToString();
             }
             
             //confere se compo nome foi preenchido
@@ -100,26 +99,38 @@ namespace Site.Pages
             {
                 c.Celular = Session["celular"].ToString();
             }
+
+            //confere se campo passaporte foi preenchido
+            if (c.Passaporte.Equals(msg))
+            {
+                c.Passaporte = Session["passaporte"].ToString();
+            }
            
 
-            c.Passaporte = c.CPF;
+          
             Session["email"] = c.Email;
 
             cliente.Cadastrar(c.Email, c.Senha, c.Nome, c.CPF, c.DataNascimento, c.NCarteiraHabilitacao, c.Telefone, c.RG, c.Passaporte, c.Celular);
-          
-            lblMensagem.Text = cliente.mensagem;
 
-            Session.Remove("senha");
+           
 
-            Response.Redirect("/Pages/areacliente.aspx");
-
-            Session.Remove("nome");
-            Session.Remove("cpf");
-            Session.Remove("datanascimento");
-            Session.Remove("cnh");
-            Session.Remove("telefone");
-            Session.Remove("rg");
-            Session.Remove("celular");
+            if (cliente.mensagem.Equals(""))
+            {
+                Session.Remove("senha");
+                Session.Remove("email1");
+                Session.Remove("nome");
+                Session.Remove("cpf");
+                Session.Remove("datanascimento");
+                Session.Remove("cnh");
+                Session.Remove("telefone");
+                Session.Remove("rg");
+                Session.Remove("celular");
+                Response.Redirect("/Pages/areacliente.aspx");
+            }
+            else
+            {
+                lblMensagem.Text = cliente.mensagem;
+            }
 
         }
     }

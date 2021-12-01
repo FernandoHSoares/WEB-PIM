@@ -24,10 +24,10 @@
 
       <ul class=" menu">
         <a class="nav-user-icon" href="areacliente.aspx"><img src="img/user.png" alt="img"></a>
-        <li><a href="pagina-inicial.html" class="menu-btn">Início</a></li>
-        <li><a href="localizacao.html" class="menu-btn">Localização</a></li>
-        <li><a href="tarifas.html" class="menu-btn">Tarifas</a></li>
-        <li><a href="condicoes.html" class="menu-btn">Condições</a></li>
+        <li><a href="PaginaInicial.aspx" class="menu-btn">Início</a></li>
+        <li><a href="localizacao.aspx" class="menu-btn">Localização</a></li>
+        <li><a href="tarifas.aspx" class="menu-btn">Tarifas</a></li>
+        <li><a href="condicoes.aspx" class="menu-btn">Condições</a></li>
       </ul>
       <a class="nav-btn"><button runat="server" onserverclick="btnAlugar" >Alugar</button></a>
     </nav>

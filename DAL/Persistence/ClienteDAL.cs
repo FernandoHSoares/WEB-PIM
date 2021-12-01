@@ -65,14 +65,14 @@ namespace DAL.Persistence
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                this.mensagem = "cadastrado com sucesso! ";
+                this.mensagem = "";
                 tem = true;
 
             }
-            catch ( SqlException)
+            catch ( SqlException ex)
             {
 
-                this.mensagem = "erro ao efetuar cadastro! ";
+                this.mensagem = "erro ao efetuar cadastro! " + ex;
             }
 
 

@@ -22,7 +22,7 @@ namespace Site.Pages
         public void btnProsseguir(object sender, EventArgs e)
         {
 
-            Session["email"] = txEmail.Text;
+            Session["email1"] = txEmail.Text;
             Session["senha"] = txSenha.Text;
             Session["nome"] = txNome.Text;
             Session["cpf"] = txCPF.Text;
@@ -31,6 +31,7 @@ namespace Site.Pages
             Session["telefone"] = txTel1.Text;
             Session["rg"] = txRG.Text;
             Session["celular"] = txCelular.Text;
+            Session["passaporte"] = txpassaporte.Text;
 
 
                  
@@ -44,7 +45,7 @@ namespace Site.Pages
                 clie.VerificaCPF(txCPF.Text);
                 clie.VerificaCNH(txNumCNH.Text);
                 clie.VerificaRG(txRG.Text);
-                clie.VerificaPassaporte(txCPF.Text);
+                clie.VerificaPassaporte(txpassaporte.Text);
 
                 if(clie.msgemail.Equals(MsgVerifica) && clie.msgcpf.Equals(MsgVerifica)&& clie.msgrg.Equals(MsgVerifica)&& clie.msgcnh.Equals(MsgVerifica)&&clie.msgpassaporte.Equals(MsgVerifica))
                 {

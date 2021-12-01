@@ -128,6 +128,7 @@
     <Content Include="Pages\img\Login-Cliente-img\alucar.png" />
     <Content Include="Pages\img\Login-Cliente-img\Cadastro de Cliente.png" />
     <Content Include="Pages\img\Login-Cliente-img\disponivel_no_google_play_1.png" />
+    <Content Include="Pages\img\EditarCadastrodeCliente.png" />
     <Content Include="Pages\img\Login-Cliente-img\facebook_1.png" />
     <Content Include="Pages\img\Login-Cliente-img\instagram_1.png" />
     <Content Include="Pages\img\Login-Cliente-img\Line 4.png" />
@@ -142,6 +143,7 @@
     <Content Include="Pages\img\Login-Cliente-img\square_39.png" />
     <Content Include="Pages\img\Login-Cliente-img\tarifas-img\condicoes-text.png" />
     <Content Include="Pages\img\Login-Cliente-img\tarifas-img\Confirmação da Reserva.png" />
+    <Content Include="Pages\img\EditarReservarVeículo.png" />
     <Content Include="Pages\img\Login-Cliente-img\tarifas-img\Leia as Informações Sobre a Sua Reserva.png" />
     <Content Include="Pages\img\Login-Cliente-img\tarifas-img\SOBRE A SUA RESERVA_.png" />
     <Content Include="Pages\img\Login-Cliente-img\tarifas-img\tabela refeita1 1.png" />

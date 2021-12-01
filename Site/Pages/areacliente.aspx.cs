@@ -21,8 +21,9 @@ namespace Site
 
         protected void btnSair(object sender, EventArgs e)
         {
-            Response.Redirect("/Pages/Paginainicial.aspx");
             Session.Remove("email");
+            Response.Redirect("/Pages/Paginainicial.aspx");
+           
         }
     }
 }

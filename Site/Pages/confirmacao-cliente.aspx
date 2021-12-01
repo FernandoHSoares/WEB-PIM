@@ -77,12 +77,23 @@
         <br />
           <div class="box-1">
             <div class="cont-confirme">
-              <p class="email-par">CPF ou Passaporte*/**:</p>
+              <p class="email-par">CPF*/**:</p>
              &nbsp&nbsp <asp:Label ID="lblCPF" runat="server"></asp:Label>
               <asp:TextBox ID="txCPF" runat="server" minlength="14" maxlength="14" onkeypress="$(this).mask('000.000.000-00');" ></asp:TextBox>
             </div>
           </div>
+          
+
+             <br />
+          <div class="box-1">
+            <div class="cont-confirme">
+              <p class="email-par">Passaporte:</p>
+             &nbsp&nbsp <asp:Label ID="lblpassaporte" runat="server"></asp:Label>
+              <asp:TextBox ID="txpassaporte" runat="server" minlength="8" maxlength="8" ></asp:TextBox>
+            </div>
+          </div>
             <br />
+
               <div class="box-1">
             <div class="cont-confirme">
               <p class="email-par">RG:</p>
@@ -114,7 +125,7 @@
             <div class="cont-confirme">
               <p class="email-par">Telefone/Celular 1*:</p>
               &nbsp&nbsp<asp:Label ID="lblTelefone" runat="server" ></asp:Label>
-              <asp:TextBox ID="txTelefone" runat="server" onkeypress="$(this).mask('(00) 0000-00009')" ></asp:TextBox>
+              <asp:TextBox ID="txTelefone" runat="server" onkeypress="$(this).mask('(00)0000-00009')" ></asp:TextBox>
             </div>
           </div>
 
@@ -123,7 +134,7 @@
             <div class="cont-confirme">
               <p class="email-par">Telefone/Celular 2 (Opcional):</p>
               &nbsp&nbsp<asp:Label ID="lblCelular" runat="server"></asp:Label>
-              <asp:TextBox ID="txcel" runat="server" onkeypress="$(this).mask('(00) 0000-00009')"></asp:TextBox>
+              <asp:TextBox ID="txcel" runat="server" onkeypress="$(this).mask('(00)0000-00009')"></asp:TextBox>
 
             </div>
           </div>

@@ -112,6 +112,15 @@ namespace Site.Pages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredCPF;
         
         /// <summary>
+        /// Controle txpassaporte.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txpassaporte;
+        
+        /// <summary>
         /// Controle txRG.
         /// </summary>
         /// <remarks>

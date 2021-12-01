@@ -18,8 +18,6 @@ namespace Site.Pages
             Cliente c = new Cliente();
             ClienteDAL clie = new ClienteDAL();
 
-
-            
             clie.ImprimirCadastro(email);
             c.Nome = clie.Nome;
             c.CPF = clie.CPF;
@@ -29,7 +27,12 @@ namespace Site.Pages
             c.Telefone = clie.Telefone;
             c.NCarteiraHabilitacao = clie.CNH;
 
-            
+            if (c.DataNascimento.Length > 10)
+            {
+                c.DataNascimento = c.DataNascimento.Substring(0, 10);
+            }
+
+
             lblTelefone1.Text = c.Telefone;
             lblcelular.Text = c.Celular;
             lblCPF.Text = c.CPF;
